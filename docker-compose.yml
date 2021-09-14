@@ -1,0 +1,11 @@
+---
+version: "2.1"
+services:
+  agentdvr:
+    image: 0xdecaf/agentdvr
+    container_name: AgentDVR
+    ports:
+      - 8090:8090
+      - 3478:3478/udp
+      - 50000-50010:50000-50010/udp
+    restart: unless-stopped
